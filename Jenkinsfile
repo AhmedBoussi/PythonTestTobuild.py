@@ -9,7 +9,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m py_compile sources/*.py'
+                sh 'python -m py_compile sources.py'
 
             }
         }
