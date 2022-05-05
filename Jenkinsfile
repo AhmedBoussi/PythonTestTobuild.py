@@ -8,7 +8,7 @@ pipeline {
               }
           }
           steps {
-               sh 'python -m py_compile sources/*.py'
+               sh 'python -m py_compile /*.py'
                stash(name: 'compiled-results', includes: 'sources/*.py*')
                               stash(name: 'setUpPy', includes: 'setup.py*')
                stash(name: 'pypirc', includes: '.pypirc')
