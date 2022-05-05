@@ -8,7 +8,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py' // (4)
+                sh 'python -m py_compile sources.py' // (4)
                 stash(name: 'compiled-results', includes: 'sources/*.py*') // (5)
             }
         }
